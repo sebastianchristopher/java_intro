@@ -1,5 +1,19 @@
-// can you remember how to set up your main function?
+public class JavaBuzz {
 
-// "Java" if divisible by 3
-// "Buzz" if divisible by 5
-// "JavaBuzz" if divisible by 15
+  public static void main(String[] args){
+    for(int i = 1; i <= 100; i++){
+      System.out.println(fizzBuzz(i));
+    }
+  }
+  public static String fizzBuzz(int i){
+    if(i % 3 == 0 && i % 5 == 0){
+      return "JavaBuzz";
+    } else if(i % 3 == 0){
+      return "Java";
+    } else if(i % 5 == 0){
+      return "Buzz";
+    } else {
+      return Integer.toString(i);
+    }
+  }
+}
